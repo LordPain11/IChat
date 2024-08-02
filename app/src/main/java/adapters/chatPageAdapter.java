@@ -1,6 +1,7 @@
 package adapters;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +53,9 @@ public class chatPageAdapter extends RecyclerView.Adapter<chatPageAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
 
-        userData.sort(Comparator.comparing(UserModel::getRecentMsgTime).reversed());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            userData.sort(Comparator.comparing(UserModel::getRecentMsgTime).reversed());
+        }
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
