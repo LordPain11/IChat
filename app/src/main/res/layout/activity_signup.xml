@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two"
+    tools:context=".SignupActivity">
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progress_bar"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="left"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003"
+        android:layout_marginLeft="15sp"/>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="55sp"
+        android:layout_marginBottom="609sp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094"
+        android:layout_marginLeft="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/edittext_container"
+        android:layout_margin="20dp"
+        >
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mail"
+        android:hint="Enter Your Email Address"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:fontFamily="@font/poppins_regular"
+
+
+
+        />
+
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail"
+            android:hint="Enter Your Username"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:fontFamily="@font/poppins_regular"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:hint="Create a Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/username"
+        android:padding="10dp"
+        android:fontFamily="@font/poppins_regular"
+
+        />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/hide_pass_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edittext_container"
+        android:layout_alignRight="@+id/edittext_container"
+        android:padding="10dp"
+        android:layout_margin="3dp"
+        android:src="@drawable/ic_baseline_remove_red_eye_24"
+        android:layout_above="@+id/edittext_container"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/edittext_container"
+    android:layout_marginTop="30dp"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/btn_container"
+    android:gravity="center"
+    android:paddingBottom="25dp"
+    >
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_btn"
+        android:text="Sign-Up"
+        android:layout_margin="10sp"
+        android:textColor="@color/white"
+        android:backgroundTint="#095DE9"
+        app:cornerRadius="50dp"
+
+        />
+
+    <Button
+        android:id="@+id/google_signin"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/google"
+        android:text="Google"
+        app:cornerRadius="50dp"
+
+        />
+</LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/move_to_signin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/btn_container"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="?android:attr/selectableItemBackground"-->
+<!--        android:text="Already have account? Sign-in." />-->
+
+    <Button
+            android:id="@+id/move_to_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_container"
+            android:layout_centerHorizontal="true"
+            android:text="Already have account? Login."
+            android:textSize="15sp"
+            app:cornerRadius="50sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins_regular" />
+
+    <TextView
+        android:id="@+id/logoname"
+        android:layout_width="194sp"
+        android:layout_height="116sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="107sp"
+        android:layout_marginTop="146sp"
+        android:layout_marginEnd="110sp"
+        android:layout_marginBottom="468sp"
+        android:fontFamily="@font/truetext"
+        android:gravity="center"
+        android:text="iChat"
+        android:textColor="@color/black"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="406dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="711sp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-3sp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Developed by VipinK 2024"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+
+</RelativeLayout>
